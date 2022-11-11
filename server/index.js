@@ -6,12 +6,19 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
+// const db = mysql.createConnection({
+//     user: "root",
+//     host: "localhost",
+//     password: "password",
+//     database: "society",
+// });
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "password",
-    database: "society",
+	user: "u4z57ss9m4ac4mzf",
+	host: "byfhtzlfszq54zs6guvd-mysql.services.clever-cloud.com",
+	password: "nKY7I4PErURB3wWz7sMx",
+	database: "byfhtzlfszq54zs6guvd",
 });
+
 //----------------------LOGIN REQUESTS----------------------
 app.post("/adminlogin", (req, res) => {
 

@@ -43,7 +43,7 @@ function Adminpage() {
         });
     };
     const addOwner = () => {
-        //making post request to server through the endpopints
+        //making post request to server through the endpoints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
         Axios.post('http://localhost:3001/createowner', {
             wingFlatno: wingFlatno,
