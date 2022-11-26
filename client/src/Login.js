@@ -7,7 +7,7 @@ import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 function LoginPage() {
 	const baseRoute =
-		"https://sanikainamdar-crispy-spork-jwj6qwjqw7p2j56-3001.preview.app.github.dev";
+		"http://localhost:3001";
 	const navigate = useNavigate();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
