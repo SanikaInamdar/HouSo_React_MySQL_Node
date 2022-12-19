@@ -29,7 +29,7 @@ function Adminpage() {
     const addFlat = () => {
         //making post request to server through the endpopints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
-        Axios.post('http://localhost:3001/createflat', {
+        Axios.post('https://houso-backend.up.railway.app/createflat', {
             wingFlatno: wingFlatno,
             flatType: flatType,
             societyName: societyName,
@@ -45,7 +45,7 @@ function Adminpage() {
     const addOwner = () => {
         //making post request to server through the endpoints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
-        Axios.post('http://localhost:3001/createowner', {
+        Axios.post('https://houso-backend.up.railway.app/createowner', {
             wingFlatno: wingFlatno,
             governmentID: governmentID,
             ownerName: ownerName,
@@ -61,7 +61,7 @@ function Adminpage() {
     const updateOwner = () => {
         //making post request to server through the endpopints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
-        Axios.put('http://localhost:3001/updateowner', {
+        Axios.put('https://houso-backend.up.railway.app/updateowner', {
 
             governmentID: governmentID,
             ownerName: ownerName,
@@ -76,13 +76,13 @@ function Adminpage() {
         });
     };
     const getFlatandowner = () => {
-        Axios.get('http://localhost:3001/getflatandowner').then((response) => {
+        Axios.get('https://houso-backend.up.railway.app/getflatandowner').then((response) => {
             console.log(response.data);
             setflatownerList(response.data);
         });
     };
     const gettotalmonthmain = () => {
-        Axios.post('http://localhost:3001/findtotalmainten', {
+        Axios.post('https://houso-backend.up.railway.app/findtotalmainten', {
             monthPaid: monthPaid
         }).then((response) => {
             //console.log(response);
@@ -95,7 +95,7 @@ function Adminpage() {
         });
     };
     const getpaymentStatus = () => {
-        Axios.post('http://localhost:3001/checkflatpayment', {
+        Axios.post('https://houso-backend.up.railway.app/checkflatpayment', {
             wingFlatno: wingFlatno,
             monthPaid: monthPaid
         }).then((response) => {
@@ -107,7 +107,7 @@ function Adminpage() {
 
         //making post request to server through the endpopints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
-        Axios.post('http://localhost:3001/adminaddpayment', {
+        Axios.post('https://houso-backend.up.railway.app/adminaddpayment', {
             monthPaid: monthPaid,
             totalMaintenance: totalMaintenance
         }).then(() => {

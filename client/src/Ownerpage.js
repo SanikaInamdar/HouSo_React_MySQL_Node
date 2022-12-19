@@ -13,7 +13,7 @@ function Ownerpage() {
     const [tenantDetails, settenantDetails] = useState([]);
     const [form, setform] = useState("checkflatdueform");
     const checkflatdue = () => {
-        Axios.post('http://localhost:3001/checkduepayment', {
+        Axios.post('https://houso-backend.up.railway.app/checkduepayment', {
             wingFlatno: wingFlatno
         }).then((response) => {
             //console.log(response);
@@ -21,7 +21,7 @@ function Ownerpage() {
         });
     };
     const makepayment = () => {
-        Axios.put('http://localhost:3001/makepayment', {
+        Axios.put('https://houso-backend.up.railway.app/makepayment', {
             wingFlatno: wingFlatno,
             monthPaid: monthPaid
         }).then(() => {
@@ -32,7 +32,7 @@ function Ownerpage() {
     const addTenant = () => {
         //making post request to server through the endpopints
         //{key(same as in backend for catching the frontend):value(it is the variable name in state in frontend)}-> body objects
-        Axios.post('http://localhost:3001/createtenant', {
+        Axios.post('https://houso-backend.up.railway.app/createtenant', {
             wingFlatno: wingFlatno,
             governmentID: governmentID,
             tenantName: tenantName,
@@ -45,7 +45,7 @@ function Ownerpage() {
         });
     };
     const getTenant = () => {
-        Axios.post('http://localhost:3001/gettenant', {
+        Axios.post('https://houso-backend.up.railway.app/gettenant', {
             wingFlatno: wingFlatno
         }).then((response) => {
             // if(response.data.lenght===0)
@@ -58,7 +58,7 @@ function Ownerpage() {
         });
     };
     const deleteTenant = () => {
-        Axios.post('http://localhost:3001/deletetenant', {
+        Axios.post('https://houso-backend.up.railway.app/deletetenant', {
             wingFlatno: wingFlatno
         }).then((response) => {
             alert("Tenant Deleted Successfully");

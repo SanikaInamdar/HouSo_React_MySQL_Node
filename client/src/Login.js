@@ -7,7 +7,7 @@ import Axios from "axios";
 import { useNavigate } from "react-router-dom";
 function LoginPage() {
 	const baseRoute =
-		"http://localhost:3001";
+		"https://houso-backend.up.railway.app";
 	const navigate = useNavigate();
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
